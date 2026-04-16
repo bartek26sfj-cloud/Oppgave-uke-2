@@ -14,11 +14,11 @@ function sjekk(tall) {
   if (tall % 8 === 0) {
     return "Partall";
   }
-  //Hvis tallet er et partall//
+  //Sjekker om tallet er et partall//
   else {
     return "Oddetall";
   }
-  //Hvis tallet er et oddetall//
+  //Sjekker om tallet er et oddetall//
 }
 
 console.log(sjekk(69));
@@ -36,7 +36,8 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 
 function goodnightWords(text) {
-  return text.toUpperCase() + "!";
+  // Dette er en funksjon som gjør tekst til STORE BOKSTAVER
+  return text.toUpperCase() + "!"; // Gjør teksten stor og legger til !
 }
 console.log(goodnightWords("Sleep Well"));
 
@@ -105,11 +106,13 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 let arr = ["Audi", "Bentley", "Citroen", "Opel", "Kia", "Peugeot"];
-
+// Dette er en funksjon som fjerner første og siste element
 function carBrand(arr) {
   let result = [];
 
+  // Starter på indeks 1 og stopper før siste
   for (let i = 1; i < arr.length - 1; i++) {
+    // Legger element i ny array
     result.push(arr[i]);
   }
 
@@ -135,9 +138,9 @@ Eksempel 2: " Det er vanskelig å bruke metoder " skal returnere "Det er gøy å
 Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
-
+// Dette er en funksjon som erstatter ord og fjerner mellomrom
 function fixText(text) {
-  return text.trim().replace("vanskelig", "gøy");
+  return text.trim().replace("vanskelig", "gøy"); // Fjerner mellomrom og erstatter ord
 }
 console.log(fixText("Javascript er vanskelig"));
 
@@ -176,14 +179,15 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
 
-items.shift();
-items.splice(2, 1, "Linjal");
-items.splice(0, 2, "Markeringpenn");
-let result = items.join(" | ");
+items.shift(); // Fjerner første element
+items.splice(2, 1, "Linjal"); // Erstatter Viskelær med Linjal
+items.splice(0, 2, "Markeringpenn"); // Fjerner to elementer og legger til ett nytt
+let result = items.join(" | "); // Lager en string med separator
 console.log(result);
 
 let withE = items.filter(function (element) {
-  return element.includes("e");
+  // Lager ny array med bokstav e
+  return element.includes("e"); // Sjekker om element inneholder e
 });
 
 console.log(withE);
