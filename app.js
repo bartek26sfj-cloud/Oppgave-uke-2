@@ -11,7 +11,7 @@ funksjonen)
 ******************************************************************************/
 
 function sjekk(tall) {
-  if (tall % 8 === 0) {
+  if (tall % 2 === 0) {
     return "Partall";
   }
   //Sjekker om tallet er et partall//
